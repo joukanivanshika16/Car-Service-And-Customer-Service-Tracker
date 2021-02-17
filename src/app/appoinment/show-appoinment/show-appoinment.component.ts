@@ -1,3 +1,4 @@
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
 @Component({
@@ -20,13 +21,27 @@ export class ShowAppoinmentComponent implements OnInit {
   }
   addClick(){
     this.appoinment={
-      ID:0
+      Id:0,
+      FName:"",
+      LName:"",
+      MobileNo:"",
+      EMailID:"",
+      City:"",
+      Country:"",
+      Model:"",
+      Brand:"",
+      Status:"",
+      StartDate:"",
+      EndDate:"",
+      TotalTime:"",
+      TotalPrice:"",
     }
     this.ModalTitle="Add Appoinment";
     this.ActivateAddEditAppoinmentComp=true;
 
   }
-  editClick(){
+  editClick(item:any){
+    this.appoinment=item
     this.ModalTitle="Edit Appoinment";
     this.ActivateAddEditAppoinmentComp=true;
   }
@@ -35,6 +50,15 @@ export class ShowAppoinmentComponent implements OnInit {
     this.refreshAppoinmentList();
   }
 
+  deleteClick(item:any){
+    if(confirm('Are You Sure?')){
+      this.service.deleteAppoinment(item.Id).subscribe(data=>{
+        alert(data.toString());
+        this.refreshAppoinmentList();
+      });
+    }
+
+  }
 refreshAppoinmentList(){
   this.service.getAppointmentList().subscribe(data=>{
     debugger;

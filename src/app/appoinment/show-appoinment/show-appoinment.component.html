@@ -6,8 +6,7 @@
 data-bs-toggle="modal" data-bs-target="#exampleModal"
 (click)="addClick()"
 data-backdrop="static" data-keyboard="false">
-<i class="fa fa-plus" aria-hidden="true"></i> Appoinment
-  </button>
+<i class="fa fa-plus" aria-hidden="true"></i></button>
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -20,7 +19,7 @@ data-backdrop="static" data-keyboard="false">
           (click)="closeClick()"></button>
         </div>
         <div class="modal-body">
-            <app-add-edit-appoinment *ngIf="ActivateAddEditAppoinmentComp"></app-add-edit-appoinment>
+            <app-add-edit-appoinment [appoinment]="appoinment" *ngIf="ActivateAddEditAppoinmentComp"></app-add-edit-appoinment>
         </div>
       </div>
     </div>
@@ -58,11 +57,13 @@ data-backdrop="static" data-keyboard="false">
             <td>
                 <button type="button" class="btn btn-outline-success"
                 data-bs-toggle="modal" data-bs-target="#exampleModal"
-                (click)="editClick()"
+                (click)="editClick(dataItem)"
                 data-backdrop="static" data-keyboard="false">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
 
-                <button type="button" style="margin-left: 5%;" class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                <button type="button" style="margin-left: 5%;" class="btn btn-outline-danger"
+                (click)="deleteClick(dataItem)">
+                <i class="fa fa-trash" aria-hidden="true"></i></button>
             </td>
         </tr>
     </tbody>
