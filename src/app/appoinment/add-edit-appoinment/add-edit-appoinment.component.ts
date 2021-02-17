@@ -10,11 +10,11 @@ export class AddEditAppoinmentComponent implements OnInit {
   constructor(private service:SharedService) { }
 
   @Input() appoinment:any;
-  Id:String;
+  Id:Number = 0;
   FName:string;
   LName:string;
-  Mobile:string;
-  Email:string;
+  MobileNo:Number;
+  EMailID:string;
   City:string;
   Country:string;
   Model:string;
@@ -25,13 +25,17 @@ export class AddEditAppoinmentComponent implements OnInit {
   EndDate:string;
   TotalTime:string;
   TotalPrice:string;
+  CreatedBy:string;
+  UpdateBy:string;
+ 
 
   ngOnInit(): void {
+    if(this.appoinment != null && this.appoinment != undefined){
   this.Id=this.appoinment.Id;
   this.FName=this.appoinment.FName;
   this.LName=this.appoinment.LName;
-  this.Mobile=this.appoinment.Mobile;
-  this.Email=this.appoinment.Email;
+  this.MobileNo=this.appoinment.MobileNo;
+  this.EMailID=this.appoinment.EMailID;
   this.City=this.appoinment.City;
   this.Country=this.appoinment.Country;
   this.Model=this.appoinment.Model;
@@ -42,14 +46,14 @@ export class AddEditAppoinmentComponent implements OnInit {
   this.EndDate=this.appoinment.EndDate;
   this.TotalTime=this.appoinment.TotalTime;
   this.TotalPrice=this.appoinment.TotalPrice;
-
+    }
   }
 addAppoinment(){
   var val={Id:this.Id,
           FName:this.FName,
           LName:this.LName,
-          Mobile:this.Mobile,
-          Email:this.Email,
+          MobileNo:this.MobileNo,
+          EMailID:this.EMailID,
           City:this.City,
           Country:this.Country,
           Model:this.Model,
@@ -59,7 +63,10 @@ addAppoinment(){
           StartDate:this.EndDate,
           EndDate:this.EndDate,
           TotalTime:this.TotalTime,
-          TotalPrice:this.TotalPrice};
+          TotalPrice:this.TotalPrice,
+          CreatedBy:1,
+          UpdatedBy:1,
+        };
           this.service.addAppoinment(val).subscribe(res=>{
             alert(res.toString());
           });
@@ -68,8 +75,8 @@ addAppoinment(){
           var val={Id:this.Id,
             FName:this.FName,
             LName:this.LName,
-            Mobile:this.Mobile,
-            Email:this.Email,
+            MobileNo:this.MobileNo,
+            EMailID:this.EMailID,
             City:this.City,
             Country:this.Country,
             Model:this.Model,
@@ -79,9 +86,12 @@ addAppoinment(){
             StartDate:this.EndDate,
             EndDate:this.EndDate,
             TotalTime:this.TotalTime,
-            TotalPrice:this.TotalPrice};
+            TotalPrice:this.TotalPrice,
+            CreatedBy:1,
+            UpdatedBy:1,
+          };
             this.service.editAppoinment(val).subscribe(res=>{
             alert(res.toString());
                       });
           }
-    }
+  }

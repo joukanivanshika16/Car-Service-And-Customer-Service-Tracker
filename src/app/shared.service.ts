@@ -11,18 +11,18 @@ export class SharedService {
 
   constructor(private http:HttpClient ) { }
 
-  getAppointmentList()
+getAppointmentList()
 {
   return this.http.get<any>(this.APIUrl+'/Appointment/allAppointments');
 }
 addAppoinment(val:any){
-return this.http.post(this.APIUrl+'/appoinment',val);
+return this.http.post(this.APIUrl+'/Appoinment/CreateAppoinments',val);
 }
 editAppoinment(val:any){
-return this.http.put(this.APIUrl+'/appoinment',val);
+return this.http.put(this.APIUrl+'/Appoinment/UpdateAppoinments',val);
 }
 deleteAppoinment(id:any){
-  return this.http.delete(this.APIUrl+'/appoinment/'+id);
+  return this.http.delete(this.APIUrl+'/Appoinment/DeleteAppoinments/'+id);
 }
 getCustomerList()
 {
