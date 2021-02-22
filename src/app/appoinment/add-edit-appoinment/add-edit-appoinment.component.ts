@@ -11,22 +11,22 @@ export class AddEditAppoinmentComponent implements OnInit {
 
   @Input() appoinment:any;
   Id:Number = 0;
-  FName:string;
-  LName:string;
-  MobileNo:Number;
-  EMailID:string;
-  City:string;
-  Country:string;
-  Model:string;
-  Brand:string;
-  LicencePlate:string;
-  Status:string;
-  StartDate:string;
-  EndDate:string;
-  TotalTime:string;
-  TotalPrice:string;
-  CreatedBy:string;
-  UpdateBy:string;
+  FName!:string;
+  LName!:string;
+  MobileNo!:Number;
+  EMailID!:string;
+  City!:string;
+  Country!:string;
+  Model!:string;
+  Brand!:string;
+  LicencePlate!:string;
+  Status!:string;
+  StartDate!:string;
+  EndDate!:string;
+  TotalTime!:string;
+  TotalPrice!:string;
+  CreatedBy!:string;
+  UpdateBy!:string;
  
 
   ngOnInit(): void {
@@ -48,7 +48,9 @@ export class AddEditAppoinmentComponent implements OnInit {
   this.TotalPrice=this.appoinment.TotalPrice;
     }
   }
+
 addAppoinment(){
+  debugger
   var val={Id:this.Id,
           FName:this.FName,
           LName:this.LName,

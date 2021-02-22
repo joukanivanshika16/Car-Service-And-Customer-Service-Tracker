@@ -35,6 +35,7 @@ export class ShowAppoinmentComponent implements OnInit {
       EndDate:"",
       TotalTime:"",
       TotalPrice:"",
+      
     }
     this.ModalTitle="Add Appoinment";
     this.ActivateAddEditAppoinmentComp=true;
