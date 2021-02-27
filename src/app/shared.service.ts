@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import { AddEditAppoinmentComponent } from './appoinment/add-edit-appoinment/add-edit-appoinment.component';
-import { AddEditCustomerComponent } from './customer/add-edit-customer/add-edit-customer.component';
+
 @Injectable({
   providedIn: 'root'
 })

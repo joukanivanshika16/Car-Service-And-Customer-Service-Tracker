@@ -15,6 +15,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CustomerComponent } from './customer/customer.component';
 import { ShowCustomerComponent } from './customer/show-customer/show-customer.component';
 import { AddEditCustomerComponent } from './customer/add-edit-customer/add-edit-customer.component';
+import { ServiceComponent } from './service/service.component';
+import { DealerComponent } from './dealer/dealer.component';
+import { VehicalComponent } from './vehical/vehical.component';
+import { MechanicalComponent } from './mechanical/mechanical.component';
 
 
 @NgModule({
@@ -26,7 +30,11 @@ import { AddEditCustomerComponent } from './customer/add-edit-customer/add-edit-
     HomeComponent,
     CustomerComponent,
     ShowCustomerComponent,
-    AddEditCustomerComponent
+    AddEditCustomerComponent,
+    ServiceComponent,
+    DealerComponent,
+    VehicalComponent,
+    MechanicalComponent
   ],
   imports: [
 
