@@ -20,12 +20,13 @@ export class ShowCustomerComponent implements OnInit {
   }
   addClick(){
     this.customer={
-      ID:0
+      Id:0
     }
     this.ModalTitle="Add Customer";
     this.ActivateAddEditCustomerComp=true;
   }
-  editClick(){
+  editClick(item:any){
+    this.customer=item
     this.ModalTitle="Edit Customer";
     this.ActivateAddEditCustomerComp=true;
   }
@@ -33,11 +34,21 @@ export class ShowCustomerComponent implements OnInit {
     this.ActivateAddEditCustomerComp=false;
     this.refreshCustomerList();
   }
-  refreshCustomerList(){
-   // this.service.getCustomerList().subscribe(data=>{
-     // debugger;
-    //this.CustomerList=data;
-        }
-      //);
+  deleteClick(item:any){
+    if(confirm('Are You Sure?')){
+      this.service.deleteCustomer(item.Id).subscribe(data=>{
+        alert(data.toString());
+        this.refreshCustomerList();
+      });
+    }
+  }
 
+  
+  refreshCustomerList(){
+    this.service.getCustomerList().subscribe(data=>{
+   
+    this.CustomerList=data;
+        }
+      );
+      }
 }

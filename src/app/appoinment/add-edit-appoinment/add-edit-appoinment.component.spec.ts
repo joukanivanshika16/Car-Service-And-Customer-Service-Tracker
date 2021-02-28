@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AddEditAppoinmentComponent } from './add-edit-appoinment.component';
 
 describe('AddEditAppoinmentComponent', () => {
@@ -8,7 +7,7 @@ describe('AddEditAppoinmentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddEditAppoinmentComponent ]
+      declarations: [  AddEditAppoinmentComponent ]
     })
     .compileComponents();
   });

@@ -6,17 +6,17 @@
     </div>
     <div class="row">
         <div class="col-sm-5">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control"  name="FName">
         </div>
         <div class="col-sm-2"></div>
         <div class="col-sm-5">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" >
         </div>
-    </div>
-    <div class="row">
-        <label class="col-sm-2 col-form-label">Mobile</label>
+        </div>
+        <div class="row">
+        <label class="col-sm-2 col-form-label">Address</label>
         <div class="col-sm-5"></div>
-        <label class="col-sm-2 col-form-label">Email</label>
+        <label class="col-sm-2 col-form-label">Zip Code</label>
         </div>
         <div class="row">
             <div class="col-sm-5">
@@ -30,11 +30,11 @@
         <div class="row">
             <label class="col-sm-2 col-form-label">City</label>
             <div class="col-sm-5"></div>
-            <label class="col-sm-2 col-form-label">Country</label>
+            <label class="col-sm-2 col-form-label" >Country</label>
             </div>
             <div class="row">
                 <div class="col-sm-5">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" >
                 </div>
                 <div class="col-sm-2"></div>
                 <div class="col-sm-5">
@@ -43,62 +43,19 @@
             </div>
     
             <div class="row">
-                <label class="col-sm-2 col-form-label">Model</label>
+                <label class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-5"></div>
-                <label class="col-sm-2 col-form-label">Brand</label>
-                </div>
+                <label class="col-sm-2 col-form-label" >Mobile</label>
+            </div>
                 <div class="row">
                     <div class="col-sm-5">
                         <input type="text" class="form-control">
                     </div>
                     <div class="col-sm-2"></div>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control">
-                    </div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control">
                 </div>
-                <div class="row">
-                    <label class="col-sm-2 col-form-label">Licence Plate</label>
-                    <div class="col-sm-5"></div>
-                    <label class="col-sm-2 col-form-label">Status</label>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control">
+            </div>
                         </div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label class="col-sm-2 col-form-label">Start Date</label>
-                        <div class="col-sm-5"></div>
-                        <label class="col-sm-2 col-form-label">End Date</label>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Total Time</label>
-                            <div class="col-sm-5"></div>
-                            <label class="col-sm-2 col-form-label">Total Price</label>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-sm-2"></div>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-    
-    </div>
-    
-    <button (click)="addCustomer()" class="btn btn-outline-primary" style="margin-top:2%; margin-left: 43%;">Add Customer</button>
+    <button (click)="addCustomer()"  *ngIf="customer.Id==0"  class="btn btn-outline-primary" style="margin-top:2%; margin-left: 43%;">Add Customer</button>
+    <button (click)="editCustomer()" *ngIf="customer.Id!=0" class="btn btn-outline-primary" style="margin-top:2%; margin-left: 43%;">Update Customer</button>

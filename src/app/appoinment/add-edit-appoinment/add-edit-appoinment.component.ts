@@ -50,7 +50,7 @@ export class AddEditAppoinmentComponent implements OnInit {
   }
 
 addAppoinment(){
-  debugger
+ 
   var val={Id:this.Id,
           FName:this.FName,
           LName:this.LName,

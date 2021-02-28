@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { AddEditAppoinmentComponent } from './appoinment/add-edit-appoinment/add-edit-appoinment.component';
 import { AddEditCustomerComponent } from './customer/add-edit-customer/add-edit-customer.component';
+import { AddEditVehicleComponent } from './vehicle/add-edit-vehicle/add-edit-vehicle.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,15 +27,29 @@ deleteAppoinment(id:any){
 }
 getCustomerList()
 {
-  return this.http.get<any>(this.APIUrl+'/Appointment/allAppointments');
+  return this.http.get<any>(this.APIUrl+'/Customer/allCustomers');
 }
 addCustomer(val:any){
-return this.http.post(this.APIUrl+'/appoinment',val);
+return this.http.post(this.APIUrl+'/customer',val);
 }
 editCustomer(val:any){
-return this.http.put(this.APIUrl+'/appoinment',val);
+return this.http.put(this.APIUrl+'/customer',val);
 }
 deleteCustomer(id:any){
-  return this.http.delete(this.APIUrl+'/appoinment/'+id);
+  return this.http.delete(this.APIUrl+'/customer/'+id);
+}
+
+getVehicleList()
+{
+  return this.http.get<any>(this.APIUrl+'/Vehicle/allVehicles');
+}
+addVehicle(val:any){
+return this.http.post(this.APIUrl+'/vehicle',val);
+}
+editVehicle(val:any){
+return this.http.put(this.APIUrl+'/vehicle',val);
+}
+deleteVehicle(id:any){
+  return this.http.delete(this.APIUrl+'/vehicle/'+id);
 }
 }

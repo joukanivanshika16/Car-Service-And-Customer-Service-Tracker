@@ -6,7 +6,8 @@
   data-bs-toggle="modal" data-bs-target="#exampleModal"
   (click)="addClick()"
   data-backdrop="static" data-keyboard="false">
-  <i class="fa fa-plus" aria-hidden="true"></i></button>    
+  <i class="fa fa-plus" aria-hidden="true"></i></button>
+    
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -18,7 +19,7 @@
             (click)="closeClick()"></button>
           </div>
           <div class="modal-body">
-              <app-add-edit-customer [customer]="customer" *ngIf="ActivateAddEditCustomerComp"></app-add-edit-customer>
+              <app-add-edit-vehicle [vehicle]="vehicle" *ngIf="ActivateAddEditVehicleComp"></app-add-edit-vehicle>
           </div>
         </div>
       </div>
@@ -29,12 +30,17 @@
       <thead>
           <tr>
               <th>ID</th>
-              <th>Name</th>
-              <th>Address</th>
-              <th>City</th>
-              <th>ZipCode</th>
-              <th>Country</th>
-              <th>Mobile</th>
+              <th>Description</th>
+              <th>Brand</th>
+              <th>Licence Plate</th>
+              <th>Model</th>
+              <th>Meter Value</th>
+              <th>Registration Date</th>
+              <th>Weight</th>
+              <th>MCH Code</th>
+              <th>Vin</th>
+              <th>Engine Number</th>
+              <th>Color</th>
               <th>Options</th>
           </tr>
       </thead>
@@ -47,16 +53,20 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td>
-                <button type="button" class="btn btn-outline-success"
-                data-bs-toggle="modal" data-bs-target="#exampleModal"
-                (click)="editClick(dataItem)"
-                
-                data-backdrop="static" data-keyboard="false">
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                <button type="button" style="margin-left: 5%;" class="btn btn-outline-danger"
-                (click)="deleteClick(dataItem)">
-                <i class="fa fa-trash" aria-hidden="true"></i></button>
+                  <button type="button" class="btn btn-outline-success"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  (click)="editClick(dataItem)"
+                  
+                  data-backdrop="static" data-keyboard="false">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                  <button type="button" style="margin-left: 5%;" class="btn btn-outline-danger"
+                  (click)="deleteClick(dataItem)">
+                  <i class="fa fa-trash" aria-hidden="true"></i></button>
               </td>
           </tr>
       </tbody>
