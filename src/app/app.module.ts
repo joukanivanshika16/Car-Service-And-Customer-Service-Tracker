@@ -20,6 +20,7 @@ import { ShowVehicleComponent } from './vehicle/show-vehicle/show-vehicle.compon
 import { AddEditVehicleComponent } from './vehicle/add-edit-vehicle/add-edit-vehicle.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +31,13 @@ import { AddEditVehicleComponent } from './vehicle/add-edit-vehicle/add-edit-veh
     CustomerComponent,
     ShowCustomerComponent,
     AddEditCustomerComponent,
+<<<<<<< HEAD
     VehicleComponent,
     ShowVehicleComponent,
     AddEditVehicleComponent
+=======
+
+>>>>>>> f31077d70207e8e98f40879a7c0834d1224e30c8
   ],
   imports: [
 
