@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-<<<<<<< HEAD
 import {Observable} from 'rxjs';
 import { AddEditAppoinmentComponent } from './appoinment/add-edit-appoinment/add-edit-appoinment.component';
 import { AddEditCustomerComponent } from './customer/add-edit-customer/add-edit-customer.component';
 import { AddEditVehicleComponent } from './vehicle/add-edit-vehicle/add-edit-vehicle.component';
-=======
 
->>>>>>> f31077d70207e8e98f40879a7c0834d1224e30c8
 @Injectable({
   providedIn: 'root'
 })
