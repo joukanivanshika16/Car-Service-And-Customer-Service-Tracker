@@ -17,7 +17,10 @@ import { ShowCustomerComponent } from './customer/show-customer/show-customer.co
 import { AddEditCustomerComponent } from './customer/add-edit-customer/add-edit-customer.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { ShowVehicleComponent } from './vehicle/show-vehicle/show-vehicle.component';
-import { AddEditVehicleComponent } from './vehicle/add-edit-vehicle/add-edit-vehicle.component';
+import { CustomervehicleComponent } from './customervehicle/customervehicle.component';
+import { ShowCustomervehicleComponent } from './customervehicle/show-customervehicle/show-customervehicle.component';
+import { AddEditVehicleComponent } from './customervehicle/add-edit-vehicle/add-edit-vehicle.component';
+
 
 
 
@@ -33,7 +36,9 @@ import { AddEditVehicleComponent } from './vehicle/add-edit-vehicle/add-edit-veh
     AddEditCustomerComponent,
     VehicleComponent,
     ShowVehicleComponent,
-    AddEditVehicleComponent
+    CustomervehicleComponent,
+    ShowCustomervehicleComponent,
+    AddEditVehicleComponent,
 
   ],
   imports: [
